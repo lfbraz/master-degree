@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  textual_analysis_postgres:
+    image: "postgres"
+    container_name: "textual_analysis"
+    ports:
+      - "54320:5432"
+    volumes:
+      - ./db/schema.sql://docker-entrypoint-initdb.d/init.sql
+    environment:
+      POSTGRES_USER: "user_postgres"
+      POSTGRES_PASSWORD: "user_password"
+      POSTGRES_DB: "textual_analysis"

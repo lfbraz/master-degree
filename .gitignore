@@ -102,3 +102,10 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Managing for Stakeholders
+driver/
+chrome
+chromedriver
+*.pdf
+
